@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "task":"Start adding a task",
+    "task":"Start adding a todo",
     "completed":false
   }
 ]

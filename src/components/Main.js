@@ -93,7 +93,7 @@ export function Main() {
         <div id="filter">
           {
             buttons.map((category) => (
-              <FilterButton category={category} /*filterTodos={filterTodos}*/ />
+              <FilterButton category={category} filterTodos={filterTodos} />
             ))
           }
         </div>
