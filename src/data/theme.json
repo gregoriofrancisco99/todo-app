@@ -1,0 +1,8 @@
+[
+  {
+    "background": "hsl(235, 21%, 11%)",
+    "color": "hsl(233, 11%, 84%)",
+    "completed-task": "hsl(233, 14%, 35%)",
+    "list-bg":"hsl(235, 24%, 19%)"
+  }
+]

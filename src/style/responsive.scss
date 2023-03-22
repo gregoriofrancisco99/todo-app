@@ -1,0 +1,23 @@
+// Define the breakpoints
+$breakpoint-small: 320px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+// Define a mixin that takes a breakpoint name and a block of styles
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media only screen and (max-width: $breakpoint-small) {
+      @content;      
+    }
+  }
+  @else if $breakpoint == medium {
+    @media only screen and (max-width: $breakpoint-medium) {
+      @content;
+    }
+  }
+  @else if $breakpoint == large {
+    @media only screen and (max-width: $breakpoint-large) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "responsive";
+
+#controller {
+  width: 100%;
+  padding: 1rem;
+  background: var(--main-list-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  
+  color: hsl(233, 14%, 35%);
+  border-radius: 0 0 .35rem .35rem;
+
+  #filter {
+    @include respond-to(medium) {
+      display: none;
+    }
+  }
+
+  button {
+    margin-left: 1rem;
+  }
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    color: hsl(233, 14%, 35%);
+    font-weight: 700;
+
+    &:hover {
+      color: var(--main-text-color);
+    }
+  }
+}

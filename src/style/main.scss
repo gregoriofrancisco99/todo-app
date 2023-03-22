@@ -1,0 +1,143 @@
+@import "responsive";
+
+main {
+  width: 530px;
+  margin: -7.5rem auto 0;
+    
+  @include respond-to(medium) {
+    width: 80%;
+    margin-top:-6.5rem;
+  }
+  @include respond-to(large) {
+    margin-top:-6.5rem;
+  }
+
+  form {
+    background: transparent;
+    
+    div {
+      width: 100%;
+      margin: 0 0 1.5rem;
+      padding: .7rem;
+      background: var(--main-list-bg-color);
+      
+      display: flex;
+      border-radius: .35rem;
+      position: relative;
+      
+      label { 
+        position: absolute;
+        top: 1.4rem;
+        left: 2.7rem;
+      }
+      input {
+        width: 87%;
+        margin: 0 auto;
+        background: transparent;
+        border: none;
+        padding: .5rem 0;
+        
+        color: var(--main-text-color);
+        outline: none;
+        font-size: 1.2rem;        
+        z-index: 999;
+
+        &:active, &:focus, &:target, &:visited {
+          ~ label {
+            display: none;
+          }
+        }
+
+        @include respond-to(medium) {
+          font-size: inherit;
+        }
+      }
+    }
+    
+    ul {
+      background: var(--main-list-bg-color);
+      padding: 0 1rem;
+      border-bottom: 1px solid hsl(237, 14%, 26%);
+      border-radius: .35rem .35rem 0 0;
+      list-style: none;
+ 
+      li {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+
+        padding: 1rem 0rem;
+        font-size: 1rem;
+        color: var(--main-text-color);
+        border-bottom: solid hsl(237, 14%, 26%).1rem;
+
+        position: relative;
+        
+        label {
+          cursor: pointer;
+          padding-left: 1.2rem;
+     
+          &::after {
+            content: '';
+            position: absolute;
+            top: .75rem;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border: solid hsl(237, 14%, 26%) 1px;
+            border-radius: 50%;
+            
+          }
+          &:hover {
+            &::after {
+              border-color: hsl(192, 44%, 20%);
+            }
+          }
+        }
+      }
+      li.done {
+        color: var(--main-completedTask-color);
+        text-decoration: line-through;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: .75rem;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+          border: none;
+          border-radius: 50%;
+        }
+      }  
+
+      input {
+        outline: none;
+        opacity: 0;
+
+        &:checked {
+          ~ label {
+            &::after {
+              display: none;
+            }
+              &::before {
+                content: '';
+                position: absolute;
+                top: .75rem;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+                border: none;
+                border-radius: 50%;
+              }
+            }
+          }
+      }
+    }
+
+  }
+}

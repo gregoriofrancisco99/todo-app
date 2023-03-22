@@ -1,0 +1,43 @@
+@import "responsive";
+
+header {
+  background: url('./../images/bg-desktop-dark.jpg') no-repeat;
+  background-size: 100% 100%;
+  
+  padding: 4rem 29em 10rem;  
+  
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  
+  @include respond-to(large) {
+    background-size: 100% 100%;
+    background-position: 30% 100%;
+    padding: 2.5rem 24% 8rem;
+    @include respond-to(medium) {
+      height: auto;
+      background-size: 200% 100%;
+      background-position: 30% 100%;
+      padding: 2.5rem 10% 8rem;
+    }
+  }
+  
+  #logo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    
+    @include respond-to(medium) {
+      font-size: 1.5rem;      
+    }
+  }
+  a {
+    img {
+      @include respond-to(medium) {
+        width: 1rem;
+      }
+    }
+  }
+
+}
