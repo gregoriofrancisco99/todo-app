@@ -4,12 +4,12 @@ main {
   width: 530px;
   margin: -7.5rem auto 0;
     
-  @include respond-to(medium) {
-    width: 80%;
-    margin-top:-6.5rem;
-  }
   @include respond-to(large) {
     margin-top:-6.5rem;
+    @include respond-to(medium) {
+      width: 80%;
+      margin-top:-5.5rem;
+    }
   }
 
   form {
@@ -18,6 +18,9 @@ main {
     div {
       width: 100%;
       margin: 0 0 1.5rem;
+      @include respond-to(medium) {
+        margin-bottom: .5rem;
+      }
       padding: .7rem;
       background: var(--main-list-bg-color);
       
@@ -139,5 +142,26 @@ main {
       }
     }
 
+  }
+}
+
+.attribution {
+  width: 100%;
+  background: transparent;
+  padding: 3rem 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    &:last-child {
+      margin-top: 1rem;
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 }

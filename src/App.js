@@ -10,8 +10,8 @@ export function App() {
       <Header />
       <Main />
     <div className="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+      <p>Coded by <a href="https://gregoriofrancisco99.github.io/Rocket-Links/" target="_blank">Gregório Francisco</a>.</p>
     </div>
   </>
   );

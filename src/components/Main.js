@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import './../style/main.scss';
@@ -9,7 +9,11 @@ import { ItemsList } from './ItemsList';
 import { FilterButton } from "./FilterButton";
 
 export function Main() {
-  const [data, setData] = useState(database);
+  const [data, setData] = useState((JSON.parse(localStorage.getItem('todos'))));
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(data));
+  }, [data]);
 
   const filterTodos = (status) => {
     const filteredTodos = database.filter((todo) => {

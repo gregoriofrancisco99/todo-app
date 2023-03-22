@@ -11,9 +11,7 @@
   --main-list-bg-color: hsl(235, 24%, 19%);
 
   font-family: 'Josefin Sans', sans-serif;
-  @include respond-to(medium) {
-    font-size: .78rem;
-  }
+
 }
 
 body {
